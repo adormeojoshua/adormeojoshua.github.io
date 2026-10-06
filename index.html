@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Joshua Aeron Adormeo, Computer Science student who designs, builds, and ships mobile apps. Open to OJT from December 2026.">
+<meta name="description" content="Joshua Aeron Adormeo, Computer Science student who designs, builds, and tests mobile apps. Open to OJT from December 2026.">
 <title>Joshua Aeron Adormeo | App Developer and Software Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@ nav li a.hire{color:#07061a;background:linear-gradient(90deg,var(--v),var(--c));
 .chip{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:99px;font-size:.85rem;color:var(--muted);margin-bottom:26px}
 .chip b{width:8px;height:8px;border-radius:50%;background:#35e08a;box-shadow:0 0 12px #35e08a;animation:pl 2s infinite}
 @keyframes pl{50%{opacity:.35}}
-h1{font-size:clamp(2.8rem,8vw,6.4rem)}
+h1{font-size:clamp(2.5rem,6.6vw,5rem)}
 h1 span{display:block;overflow:hidden;padding-bottom:.1em}
 h1 i{display:block;font-style:normal;animation:up 1.1s cubic-bezier(.2,.8,.2,1) both}
 h1 span:nth-child(2) i{animation-delay:.12s}h1 span:nth-child(3) i{animation-delay:.24s}
@@ -174,6 +174,11 @@ section.blk{padding:110px 0 20px}
 .sk span{display:inline-block;margin:4px 6px 4px 0;padding:4px 14px;border:1px solid var(--line);border-radius:99px;font-size:.88rem;transition:border-color .2s,box-shadow .2s}
 .sk span:hover{border-color:var(--v);box-shadow:0 0 18px rgba(124,92,255,.5)}
 .sk .q{opacity:.7}
+@media(min-width:861px){.sk .q{grid-column:span 2}}
+.tl small{color:var(--muted)}
+.ab{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}.ab>div{padding:34px}.ab p+p{margin-top:14px}
+.facts{list-style:none}.facts li{display:grid;grid-template-columns:7.5em 1fr;gap:10px;padding:11px 0;border-top:1px solid var(--line)}
+.facts li:first-child{border:0;padding-top:0}.facts b{font-weight:600;color:var(--c)}
 .tl{list-style:none;position:relative;margin-left:8px;padding-left:34px}
 .tl::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--line)}
 .tl::after{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--v),var(--c));transform:scaleY(var(--pg,0));transform-origin:top}
@@ -192,7 +197,7 @@ footer{padding:30px 0 46px;color:var(--muted);border-top:1px solid var(--line);f
 .rv.in{opacity:1;transform:none;filter:none}
 @media(max-width:860px){
 nav li:not(:last-child){display:none}.brand{display:block}
-.hero-in,.sg,.cats-g{grid-template-columns:1fr}
+.hero-in,.sg,.cats-g,.ab{grid-template-columns:1fr}
 .stage{height:calc(548px*.6)}.phone{scale:.6;transform-origin:top center}.fc{display:none}
 .hero-in .stage{order:2}
 .sg{gap:0}.sg .stage{order:-1}
@@ -212,6 +217,7 @@ html{scroll-behavior:auto}*,::before,::after{animation:none!important;transition
 <nav id="nav"><div class="wrap">
   <a class="brand" href="#top">Joshua Adormeo</a>
   <ul>
+    <li><a href="#about">About</a></li>
     <li><a href="#apps">Apps</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -225,20 +231,39 @@ html{scroll-behavior:auto}*,::before,::after{animation:none!important;transition
   <div class="wrap hero-in">
     <div>
       <p class="chip glass"><b></b>Open to OJT from December 2026</p>
-      <h1><span><i>I build</i></span><span><i>apps people</i></span><span><i>actually use.</i></span></h1>
-      <p class="lead">I'm Joshua Aeron Adormeo, a third-year Computer Science student. I design, structure, and ship mobile apps with <em id="rot">SwiftUI</em>.</p>
+      <h1><span><i>I build, test,</i></span><span><i>and ship apps</i></span><span><i>people use.</i></span></h1>
+      <p class="lead">I'm Joshua Aeron Adormeo, a third-year Computer Science student in Lucena City. I build iOS and Android apps, work in <em id="rot">SwiftUI</em>, and test everything like a QA tester before it ships.</p>
       <div class="cta"><a class="btn p mag" href="#apps">See the apps</a><a class="btn mag" href="mailto:adormeojoshua@gmail.com">Email me</a></div>
     </div>
     <div class="stage" id="hs">
       <span class="fc glass" style="top:60px;left:0">SwiftUI</span>
-      <span class="fc glass" style="top:230px;right:-6px;animation-delay:-2s">Firebase</span>
-      <span class="fc glass" style="bottom:70px;left:6px;animation-delay:-3.5s">MVVM</span>
+      <span class="fc glass" style="top:230px;right:-6px;animation-delay:-2s">Android Studio</span>
+      <span class="fc glass" style="bottom:70px;left:6px;animation-delay:-3.5s">QA testing</span>
       <div class="phone" id="hp"></div>
     </div>
   </div>
 </header>
 
 <div class="mq" id="mq" aria-hidden="true"><div></div><div></div></div>
+
+<section class="blk" id="about"><div class="wrap">
+  <h2 class="rv">About.</h2>
+  <div class="ab">
+    <div class="glass rv">
+      <p>I'm a Computer Science student majoring in Software Engineering at Manuel S. Enverga University Foundation. I like the whole path an app takes: designing the screens, structuring the code, building it, and testing it until it holds up.</p>
+      <p>I studied mobile app and web development in senior high school. Today I build iOS apps in SwiftUI and Android apps in Android Studio. Quality assurance is part of my focus too, so I test what I build before anyone else sees it.</p>
+    </div>
+    <div class="glass rv">
+      <ul class="facts">
+        <li><b>Based in</b><span>Lucena City, Quezon Province</span></li>
+        <li><b>Languages</b><span>English, Filipino</span></li>
+        <li><b>Focus</b><span>Software engineering, mobile, web, QA, machine learning</span></li>
+        <li><b>Interested in</b><span>Backend and frontend development</span></li>
+        <li><b>Available</b><span>OJT from December 2026</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
 
 <section class="show" id="apps">
   <div class="pin"><div class="wrap sg">
@@ -273,6 +298,7 @@ html{scroll-behavior:auto}*,::before,::after{animation:none!important;transition
       <ul>
         <li>Android app in Kotlin for driving, live camera view, two-way audio, and photo capture</li>
         <li>ESP32 firmware turns UDP commands into motor moves</li>
+        <li>Wireless link between the robot and the app, configured end to end</li>
         <li>Motors stop on their own if the signal drops</li>
       </ul>
       <div class="tags"><span>Kotlin</span><span>Android</span><span>UDP</span><span>ESP32</span><span>Python</span><span>Raspberry Pi</span></div>
@@ -294,7 +320,7 @@ html{scroll-behavior:auto}*,::before,::after{animation:none!important;transition
     <div class="fl" data-n="1"><h3>Design</h3><p>Flows and screens in Figma before any code.</p></div>
     <div class="fl" data-n="2"><h3>Structure</h3><p>MVVM keeps interface and logic apart, so each can change safely.</p></div>
     <div class="fl" data-n="3"><h3>Build</h3><p>Swift, Kotlin, and Firebase, versioned with Git.</p></div>
-    <div class="fl" data-n="4"><h3>Make it safe</h3><p>Verification flows and failsafes for when things go wrong.</p></div>
+    <div class="fl" data-n="4"><h3>Test it</h3><p>QA testing, debugging, and failsafes so it holds up when things go wrong.</p></div>
   </div>
 </div></section>
 
@@ -304,7 +330,8 @@ html{scroll-behavior:auto}*,::before,::after{animation:none!important;transition
     <div class="glass rv"><h3>Languages</h3><span>Swift</span><span>Kotlin</span><span>Java</span><span>Python</span><span>JavaScript</span><span>SQL</span></div>
     <div class="glass rv"><h3>Mobile</h3><span>SwiftUI</span><span>iOS</span><span>Android</span><span>Jetpack Compose</span></div>
     <div class="glass rv"><h3>Backend and data</h3><span>Firebase Auth</span><span>Firestore</span><span>SwiftData</span><span>SQL</span><span>REST APIs</span></div>
-    <div class="glass rv"><h3>Engineering</h3><span>MVVM</span><span>Git</span><span>Figma</span><span>Project management</span></div>
+    <div class="glass rv"><h3>Engineering</h3><span>MVVM</span><span>Git</span><span>Figma</span><span>UI/UX design</span><span>REST APIs</span><span>Project management</span></div>
+    <div class="glass rv"><h3>Quality assurance</h3><span>QA testing</span><span>Debugging</span><span>Networking</span></div>
     <div class="glass rv"><h3>Tools</h3><span>Xcode</span><span>Android Studio</span><span>VS Code</span></div>
     <div class="glass rv q"><h3>Also explored</h3><span>Raspberry Pi</span><span>ESP32</span><span>OpenCV</span><span>YOLOv8</span></div>
   </div>
@@ -314,14 +341,15 @@ html{scroll-behavior:auto}*,::before,::after{animation:none!important;transition
   <h2 class="rv">Education.</h2>
   <ol class="tl" id="tl">
     <li><time>2023 to 2027 (expected)</time><strong>BS Computer Science, major in Software Engineering</strong><br>Manuel S. Enverga University Foundation</li>
-    <li><time>April 2026</time><strong>Software Engineering: Software Design and Project Management</strong><br>The Hong Kong University of Science and Technology</li>
-    <li><time>March 2026</time><strong>AI For Good (Student) Certificate</strong><br>AI Singapore</li>
+    <li><time>April 2026</time><strong>Software Engineering: Software Design and Project Management</strong><br>The Hong Kong University of Science and Technology<br><small>Credential ID 4BZ05M9WX8XT</small></li>
+    <li><time>March 2026</time><strong>AI For Good (Student) Certificate</strong><br>AI Singapore<br><small>Credential ID 1291</small></li>
+    <li><time>2021 to 2023</time><strong>Tech-Vocational ICT: Mobile App and Web Development</strong><br>Manuel S. Enverga University Foundation, Senior High School</li>
   </ol>
 </div></section>
 
 <section class="contact" id="contact"><div class="wrap">
   <h2 class="rv">Open to an OJT placement from December 2026.</h2>
-  <p class="rv">Hiring interns in software or mobile development? I would like to hear from you.</p>
+  <p class="rv">Hiring interns in software, mobile, or QA? I am based in Lucena City, Quezon Province, and available from December 2026.</p>
   <a class="mail rv" href="mailto:adormeojoshua@gmail.com">adormeojoshua@gmail.com</a>
   <div class="social rv">
     <a href="https://github.com/adormeojoshua" target="_blank" rel="noopener">GitHub</a>
@@ -370,7 +398,7 @@ hero.addEventListener('pointermove',e=>{
   hp.style.transform=`rotateY(${x*28}deg) rotateX(${-y*22}deg)`;
 });
 hero.addEventListener('pointerleave',()=>{hp.style.transform=''});
-const W=['SwiftUI','Kotlin','Firebase','MVVM'],rot=$('#rot');let wi=0;
+const W=['SwiftUI','Android Studio','Firebase','Figma'],rot=$('#rot');let wi=0;
 if(!RM)setInterval(()=>{wi=(wi+1)%W.length;rot.textContent=W[wi];rot.classList.remove('sw');void rot.offsetWidth;rot.classList.add('sw')},2200);
 
 /* cursor glow + magnetic buttons */
@@ -383,7 +411,7 @@ $$('.mag').forEach(b=>{
 });
 
 /* marquee rows */
-const T=['SwiftUI','Kotlin','Firebase','Firestore','MVVM','Figma','Jetpack Compose','Python','Git','REST APIs'];
+const T=['SwiftUI','Android Studio','QA Testing','Kotlin','Firebase','Firestore','MVVM','Figma','Java','Python','Git','REST APIs'];
 const rows=$$('#mq div');
 rows.forEach(r=>{r.innerHTML=[...T,...T].map(t=>`<span>${t}</span>`).join('')});
 
